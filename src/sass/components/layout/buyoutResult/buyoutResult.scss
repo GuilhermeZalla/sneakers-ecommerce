@@ -1,0 +1,103 @@
+@charset "UTF-8";
+.main-buyout-result {
+    margin-top: 20px;
+    padding: 20px;
+    &>h1 {
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+    .product-container {
+        background-color: $clr-element-bg;
+        box-shadow: inset 12px 0px 1px 0 #ff7d1a;
+        border-radius: 8px;
+        outline: 2px solid $clr-primary;
+        padding: 20px 40px;
+        margin: 30px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        gap: 15px;
+        figure {
+            max-width: 200px;
+            img {
+                max-width: 100%;
+                min-width: 100%;
+                max-height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+        ul {
+            font-size: .95rem;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-left: 30px;
+            li {
+                display: inherit;
+                justify-content: center;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+                font-weight: 700;
+                text-transform: capitalize;
+                span {
+                    font-weight: 400;
+                }
+            }
+            .brand {
+                font-weight: 400;
+            }
+        }
+        &>a {
+            position: absolute;
+            right: 100px;
+            &::after {
+                position: absolute;
+                bottom: -30px;
+                left: -50px;
+                content: 'See your purchase(s)';
+                font-size: .85rem;
+                width: 160px;
+            }
+            &>svg {
+                font-size: 2.2rem;
+                color: $clr-primary;
+            }
+        }
+    }
+    &>p {
+        font-weight: 700;
+        font-size: 1rem;
+        span {
+            font-weight: 400;
+        }
+    }
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        margin-top: 80px;
+        a {
+            background-color: transparent;
+            border-radius: 3px;
+            border: 1px solid $clr-primary;
+            color: $clr-primary;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 8px 30px;
+            background: linear-gradient(to right, $clr-primary 50%, transparent 50%);
+            background-size: 200% 100%;
+            background-position: bottom right;
+            transition: all .6s ease-out;
+            &:hover {
+                background-position: bottom left;
+                color: $clr-neutral-4;
+            }
+        }
+    }
+}

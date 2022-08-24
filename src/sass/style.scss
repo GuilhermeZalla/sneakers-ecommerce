@@ -1,0 +1,29 @@
+/* Import Colors */
+
+@import './variables/colors/colors.scss';
+
+/* Import Fonts */
+
+@import './variables/fonts/fonts.scss';
+@import 'https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap';
+
+/* Import React Components */
+
+@import './components/common/header/header.scss';
+@import './components/common/header/cartItems/cartItems.scss';
+@import './components/common/header/userDropdownMenu/userDropdownMenu.scss';
+@import './components/common/header/modals/login/login.scss';
+@import './components/common/logo/logo.scss';
+@import './components/common/denied/denied.scss';
+@import './components/layout/dashboard/dashboard.scss';
+@import './components/layout/dashboard/general/general.scss';
+@import './components/layout/dashboard/data/data.scss';
+@import './components/layout/dashboard/data/newAddress/newAddress.scss';
+@import './components/layout/dashboard/wishlist/wishlist.scss';
+@import './components/layout/dashboard/purchases/purchases.scss';
+@import './components/layout/home/home.scss';
+@import './components/layout/productOverview/productOverview.scss';
+@import './components/layout/payment/payment.scss';
+@import './components/layout/paymentCart/paymentCart.scss';
+@import './components/layout/paymentBuyout/paymentBuyout.scss';
+@import './components/layout/buyoutResult/buyoutResult.scss';

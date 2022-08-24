@@ -1,0 +1,192 @@
+@charset "UTF-8";
+.main__product-overview {
+    margin: 8% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+    .container__modal {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.774);
+        display: none;
+    }
+    .main__slider {
+        flex-basis: 60%;
+        min-width: 30vw;
+        max-width: 35vw;
+        position: relative;
+        z-index: 3;
+        figure {
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 0 16px 0 #ff7d1ab0;
+            border-radius: 7px;
+            cursor: pointer;
+            overflow: scroll;
+            scroll-behavior: smooth;
+            transition: all 400ms ease-in-out;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &>img {
+                max-width: 100%;
+                min-width: 100%;
+                max-height: 100%;
+                min-height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+        &>button {
+            transition: all 100ms ease-in-out;
+            &[name='left'] {
+                position: absolute;
+                left: -60px;
+                top: 50%;
+                font-size: 2.3rem;
+            }
+            &[name='right'] {
+                position: absolute;
+                right: -60px;
+                top: 50%;
+                font-size: 2.3rem;
+            }
+            &[name='close'] {
+                position: absolute;
+                top: -40px;
+                right: -10px;
+                font-size: 2rem;
+                display: none;
+                &:active {
+                    &>svg {
+                        color: $clr-neutral-4;
+                    }
+                }
+            }
+            &>svg {
+                color: $clr-primary;
+            }
+            &:active {
+                transform: scale(95%);
+            }
+        }
+    }
+    &.w-5 {
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        .main__slider {
+            flex-basis: 40%;
+        }
+        .main__article {
+            flex-basis: 40%;
+        }
+    }
+    .main__article {
+        flex-basis: 40%;
+        .main__title {
+            font-weight: 700;
+            font-size: 2rem;
+            color: $clr-neutral;
+            line-height: 1cm;
+            position: relative;
+            &::before {
+                content: 'SNEAKER COMPANY';
+                position: absolute;
+                top: -40px;
+                font-size: .80rem;
+                color: $clr-primary;
+                letter-spacing: 1px;
+            }
+        }
+        .main__paragraph {
+            font-size: .95rem;
+            color: $clr-neutral-1;
+            line-height: .7cm;
+            max-height: 100px;
+            overflow: hidden;
+            margin: 20px 0 25px 0;
+        }
+        .main__price {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .main__payment {
+            margin-top: 25px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+            gap: 15px;
+            &>div {
+                background-color: hsla(220, 14%, 75%, 0.171);
+                display: inherit;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: row;
+                max-width: 150px;
+                min-width: 150px;
+                border-radius: 8px;
+                button {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: all 100ms ease-in-out;
+                    &:first-child {
+                        &:active {
+                            transform: scale(90%);
+                        }
+                    }
+                    &:last-child {
+                        &:active {
+                            transform: scale(110%);
+                        }
+                    }
+                    &>svg {
+                        font-size: .90rem;
+                        color: $clr-primary;
+                    }
+                }
+                .quant {
+                    text-align: center;
+                    padding: 10px;
+                    font-weight: 700;
+                    font-size: 1rem;
+                    width: 85px;
+                    height: 40px;
+                }
+            }
+            &>button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                min-width: 260px;
+                max-width: 260px;
+                background-color: $clr-primary;
+                box-shadow: 0px 4px 14px 0px #ff7d1a94;
+                padding: 15px 20px;
+                border-radius: 8px;
+                font-size: .95rem;
+                font-weight: 700;
+                color: $clr-neutral-4;
+                transition: all 250ms ease-in-out;
+                &>svg {
+                    font-size: 1.3rem;
+                }
+                &:active {
+                    transform: scale(96%);
+                }
+            }
+        }
+    }
+}

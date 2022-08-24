@@ -1,0 +1,169 @@
+@charset "UTF-8";
+.modal-login {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: hsla(0, 0%, 0%, 0.767);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5% 0;
+    position: relative;
+    &>button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transition: all 200ms ease-in-out;
+        &>svg {
+            font-size: 1.7rem;
+            color: $clr-primary;
+        }
+        &:active {
+            transform: scale(90%);
+        }
+    }
+    .register {
+        height: 550px;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    form {
+        box-shadow: 0 2px 15px 0 #00000047;
+        background-color: $clr-element-bg;
+        height: 100%;
+        border-radius: 8px;
+        padding: 30px 60px;
+        fieldset {
+            position: relative;
+        }
+        legend {
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 1cm;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        p {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+            &>svg,
+            .eye {
+                position: absolute;
+                top: 8px;
+                font-size: 1.2rem;
+                color: $clr-neutral-2;
+                &:not(.eye) {
+                    left: 10px;
+                }
+            }
+            a {
+                cursor: pointer;
+                &:active {
+                    color: $clr-primary;
+                }
+            }
+            .eye {
+                right: 10px;
+            }
+            .eye-open {
+                display: none;
+            }
+            label {
+                span {
+                    font-size: .90rem;
+                    margin-left: 5px;
+                }
+            }
+            input {
+                margin-bottom: 25px;
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                outline: 1px solid $clr-neutral-2;
+                &:focus {
+                    outline: 1px solid $clr-neutral;
+                    &~svg,
+                    &~a {
+                        color: $clr-neutral;
+                    }
+                }
+                &.login {
+                    padding: 10px 40px 10px 40px;
+                }
+                &[id='useremail'] {
+                    padding: 10px 20px 10px 40px;
+                }
+            }
+            select {
+                border: none;
+                border-radius: 5px;
+                padding: 10px;
+                outline: 1px solid $clr-neutral-2;
+                cursor: pointer;
+            }
+            button {
+                margin: 20px 0;
+                padding: 8px;
+                border-radius: 8px;
+                background-color: $clr-primary;
+                color: $clr-neutral-4;
+                font-size: .90rem;
+                font-weight: 700;
+                &:hover {
+                    opacity: 95%;
+                }
+            }
+            &:last-child {
+                text-align: center;
+            }
+            span {
+                font-weight: 400;
+                line-height: .6cm;
+                &>a {
+                    font-weight: 700;
+                }
+            }
+            .exists {
+                position: absolute;
+                top: 80px;
+                right: 0;
+                font-size: .90rem;
+                display: none;
+                color: #ff0000;
+            }
+            .verify {
+                position: absolute;
+                right: 0;
+                bottom: -5px;
+                color: #ff0000;
+                display: none;
+            }
+        }
+        &.login {
+            max-width: 500px;
+        }
+    }
+    .form__paragraph {
+        margin-top: 10px;
+        &>span {
+            font-weight: 700;
+        }
+    }
+    a {
+        color: $clr-neutral;
+        &:hover {
+            color: $clr-primary;
+        }
+    }
+}

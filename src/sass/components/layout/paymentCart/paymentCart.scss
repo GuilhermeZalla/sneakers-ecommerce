@@ -1,0 +1,462 @@
+        @charset "UTF-8";
+        .main-payment-cart {
+            height: 100%;
+            margin: 30px 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: row;
+            gap: 20px;
+            &>.aside {
+                background-color: $clr-element-bg;
+                padding: 30px 25px;
+                width: 100%;
+                flex-basis: 25%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10px;
+                a {
+                    cursor: pointer;
+                }
+                h2 {
+                    display: inherit;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 10px;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    &>svg {
+                        font-size: 1.6rem;
+                        color: $clr-primary;
+                    }
+                }
+                ul {
+                    margin-top: 15px;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    li {
+                        display: inherit;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        font-size: .85rem;
+                        padding: 20px 0 10px 0;
+                        strong {
+                            font-weight: 700;
+                        }
+                        &>div {
+                            display: flex;
+                            align-items: flex-end;
+                            flex-direction: column;
+                            line-height: .7cm;
+                            &>span {
+                                font-weight: 700;
+                                font-size: 1rem;
+                                &:last-child {
+                                    font-weight: 400;
+                                    font-size: .85rem;
+                                }
+                            }
+                        }
+                        &:last-child {
+                            h3 {
+                                background-color: $clr-secondary;
+                                display: inherit;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                gap: 15px;
+                                width: 100%;
+                                padding: 20px 0;
+                                &>span {
+                                    font-size: 1.5rem;
+                                    font-weight: 700;
+                                }
+                            }
+                            .totalpay {
+                                text-align: center;
+                                font-size: .80rem;
+                                font-weight: 400;
+                            }
+                        }
+                        &+li {
+                            border-top: 1px solid $clr-primary;
+                        }
+                    }
+                }
+                & a {
+                    width: 100%;
+                    background-color: transparent;
+                    border-radius: 4px;
+                    border: 1px solid $clr-primary;
+                    color: $clr-primary;
+                    font-weight: 700;
+                    font-size: .90rem;
+                    padding: 8px 15px;
+                    background: linear-gradient(to right, $clr-primary 50%, transparent 50%);
+                    background-size: 200% 100%;
+                    background-position: bottom right;
+                    transition: all .6s ease-out;
+                    text-align: center;
+                    &:hover {
+                        background-position: bottom left;
+                        color: $clr-neutral-4;
+                    }
+                }
+            }
+            &>div {
+                display: inherit;
+                flex-direction: column;
+                gap: inherit;
+                flex-basis: 75%;
+                section {
+                    width: 100%;
+                    background-color: $clr-element-bg;
+                    padding: 20px;
+                    &>h2 {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        margin: 20px;
+                        &>svg {
+                            color: $clr-primary;
+                            font-size: 1.4rem;
+                        }
+                    }
+                    .address__list {
+                        &>.address__item {
+                            border-left: 4px solid $clr-primary;
+                            border-radius: 3px;
+                            padding: 20px 30px;
+                            display: flex;
+                            flex-direction: column;
+                            .address__type {
+                                font-weight: 700;
+                                font-size: .90rem;
+                                line-height: .6cm;
+                                margin-bottom: 20px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                &>span {
+                                    color: $clr-primary;
+                                    font-weight: 700;
+                                }
+                            }
+                            .address__sub-list {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 10px;
+                                .address__sub-item {
+                                    color: $clr-neutral;
+                                    font-size: .90rem;
+                                }
+                                &:last-child {
+                                    margin-top: 15px;
+                                    justify-content: flex-end;
+                                    align-items: center;
+                                    flex-direction: row;
+                                    .address__sub-item {
+                                        &>button {
+                                            font-weight: 700;
+                                            font-size: .75rem;
+                                            color: $clr-neutral-2;
+                                        }
+                                        &:last-child {
+                                            &>button {
+                                                color: $clr-primary;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:last-child {
+                        padding: 20px;
+                        position: relative;
+                        h2 {
+                            margin: 0;
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+                            font-weight: 700;
+                            font-size: 1.1rem;
+                            &>svg {
+                                color: $clr-primary;
+                                font-size: 1.6rem;
+                            }
+                        }
+                        &>button {
+                            position: absolute;
+                            top: 20px;
+                            right: 20px;
+                            background-color: transparent;
+                            border-radius: 4px;
+                            border: 1px solid $clr-primary;
+                            color: $clr-primary;
+                            font-weight: 700;
+                            font-size: .80rem;
+                            padding: 8px 15px;
+                            background: linear-gradient(to right, $clr-primary 50%, transparent 50%);
+                            background-size: 200% 100%;
+                            background-position: bottom right;
+                            transition: all .6s ease-out;
+                            display: flex;
+                            align-items: center;
+                            gap: 5px;
+                            &:hover {
+                                background-position: bottom left;
+                                color: $clr-neutral-4;
+                            }
+                        }
+                        &>ul {
+                            margin-bottom: 40px;
+                            li {
+                                div {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    gap: 10px;
+                                    margin-top: 40px;
+                                    &>figure {
+                                        flex-basis: 20%;
+                                        img {
+                                            max-width: 100%;
+                                            min-width: 100%;
+                                            max-height: 100%;
+                                            min-height: 100%;
+                                            object-fit: cover;
+                                            display: block;
+                                        }
+                                    }
+                                    article {
+                                        flex-basis: 80%;
+                                        width: 100%;
+                                        font-size: .90rem;
+                                        line-height: .7cm;
+                                        h3 {
+                                            font-weight: 700;
+                                        }
+                                        h4 {
+                                            span {
+                                                font-weight: 700;
+                                            }
+                                        }
+                                    }
+                                    &>div {
+                                        &>div {
+                                            position: relative;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            gap: 10px;
+                                            &::before {
+                                                position: absolute;
+                                                top: -25px;
+                                                right: 30px;
+                                                content: 'Quant';
+                                                font-size: .90rem;
+                                                margin-bottom: 10px;
+                                            }
+                                            button {
+                                                display: inherit;
+                                                align-items: center;
+                                                &>svg {
+                                                    font-size: 1.1rem;
+                                                }
+                                                &:active {
+                                                    color: $clr-primary;
+                                                    transform: scale(95%);
+                                                }
+                                            }
+                                            &>span {
+                                                text-align: center;
+                                                font-size: 1rem;
+                                                width: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .container__shipping {
+                            form {
+                                margin-top: 25px;
+                                display: flex;
+                                flex-direction: column;
+                                gap: 12px;
+                                p {
+                                    display: inherit;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    span {
+                                        display: inherit;
+                                        align-items: center;
+                                        flex-direction: row-reverse;
+                                        gap: 5px;
+                                        font-weight: 700;
+                                        font-size: .90rem;
+                                        width: 200px;
+                                        label {
+                                            cursor: pointer;
+                                            &::after {
+                                                font-weight: 400;
+                                                line-height: .6cm;
+                                            }
+                                        }
+                                        &:nth-last-child(2) {
+                                            color: $clr-primary;
+                                            gap: 0;
+                                            width: 80px;
+                                        }
+                                        &:last-child {
+                                            width: 60px;
+                                            display: flex;
+                                            justify-content: space-between;
+                                        }
+                                    }
+                                    .blue {
+                                        &::after {
+                                            content: ' - until 4 working days';
+                                        }
+                                    }
+                                    .sedex {
+                                        &::after {
+                                            content: ' - until 8 working days';
+                                        }
+                                    }
+                                    .fedex {
+                                        &::after {
+                                            content: ' - until 5 working days';
+                                        }
+                                    }
+                                    .red {
+                                        &::after {
+                                            content: ' - until 3 working days';
+                                        }
+                                    }
+                                    input {
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            h1 {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                font-weight: 700;
+                font-size: 1.1rem;
+                margin-bottom: 25px;
+                &>svg {
+                    font-size: 1.6rem;
+                    color: $clr-primary;
+                }
+            }
+        }
+        
+        .addresses-modal {
+            background-color: hsla(0, 0%, 0%, 0.767);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            margin: 0;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            .modal {
+                background-color: $clr-element-bg;
+                box-shadow: 0 2px 15px 0 #00000047;
+                position: relative;
+                border-radius: 5px;
+                .address__list {
+                    max-height: 420px;
+                    max-width: 480px;
+                    padding: 20px;
+                    margin: 0;
+                    overflow-x: hidden;
+                    scroll-behavior: smooth;
+                    &>.address__item {
+                        border-left: 4px solid rgba(128, 128, 128, 0.301);
+                        border-radius: 3px;
+                        padding: 20px 30px;
+                        display: flex;
+                        flex-direction: column;
+                        .address__type {
+                            font-weight: 700;
+                            font-size: .90rem;
+                            line-height: .6cm;
+                            margin-bottom: 20px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            &>span {
+                                color: $clr-primary;
+                                font-weight: 700;
+                            }
+                        }
+                        .address__sub-list {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                            .address__sub-item {
+                                color: $clr-neutral;
+                                font-size: .90rem;
+                            }
+                            &:last-child {
+                                margin-top: 15px;
+                                justify-content: flex-end;
+                                align-items: center;
+                                flex-direction: row;
+                                .address__sub-item {
+                                    &>button {
+                                        font-weight: 700;
+                                        font-size: .75rem;
+                                        color: $clr-neutral-2;
+                                    }
+                                    &:last-child {
+                                        &>button {
+                                            color: $clr-primary;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                footer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 20px;
+                    button {
+                        background-color: transparent;
+                        border-radius: 3px;
+                        border: 1px solid $clr-primary;
+                        color: $clr-primary;
+                        font-weight: 700;
+                        font-size: 1.1rem;
+                        padding: 10px 30px;
+                        background: linear-gradient(to right, $clr-primary 50%, transparent 50%);
+                        background-size: 200% 100%;
+                        background-position: bottom right;
+                        transition: all .6s ease-out;
+                        &:hover {
+                            background-position: bottom left;
+                            color: $clr-neutral-4;
+                        }
+                    }
+                }
+            }
+        }

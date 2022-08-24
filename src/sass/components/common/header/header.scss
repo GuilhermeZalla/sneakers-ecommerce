@@ -1,0 +1,131 @@
+@charset "UTF-8";
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: $fnt-general;
+    background-color: #fafafb;
+    color: $clr-neutral;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+svg {
+    pointer-events: none;
+    stroke-opacity: 0;
+}
+
+button,
+input {
+    font-family: $fnt-general;
+}
+
+#root {
+    padding: 0 10%;
+}
+
+.header {
+    padding: 20px 0 0 0;
+    font-size: .95rem;
+    .header__navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.26);
+        .header__list {
+            display: inherit;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+            padding-bottom: 30px;
+            &:first-child {
+                .header__item {
+                    & a {
+                        border-bottom: 3px solid transparent;
+                        padding-bottom: 38px;
+                        color: $clr-neutral;
+                        &:not(.logo) {
+                            &:hover {
+                                border-bottom: 3px solid $clr-primary;
+                                color: $clr-primary;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        margin-right: 25px;
+                        img {
+                            width: 120px;
+                        }
+                    }
+                }
+            }
+            &:last-child {
+                gap: 20px;
+                .header__item {
+                    position: relative;
+                    cursor: pointer;
+                    & button {
+                        svg {
+                            font-size: 2rem;
+                        }
+                        &[name='nologin'] {
+                            svg {
+                                color: $clr-primary;
+                                transition: all 50ms ease-in-out;
+                                &:hover {
+                                    color: $clr-neutral;
+                                }
+                            }
+                        }
+                    }
+                    &:first-child {
+                        & svg {
+                            font-size: 1.8rem;
+                        }
+                        &>span {
+                            position: absolute;
+                            top: -5px;
+                            left: 8px;
+                            z-index: -1;
+                            font-size: .70rem;
+                            font-weight: 700;
+                            background-color: $clr-primary;
+                            color: $clr-neutral-4;
+                            border-radius: 7px;
+                            padding: 6px;
+                            transition: all 200ms ease-in-out;
+                        }
+                        &:hover {
+                            &>span {
+                                top: -15px;
+                            }
+                            .header__cart-body {
+                                visibility: visible;
+                                opacity: 1;
+                                .header__cart-list {
+                                    padding-top: 15px;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
