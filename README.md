@@ -5,8 +5,6 @@ A simple Ecommerce website built with MERN stack. MongoDB used for the backend w
 React Router used for navigation. 
 
 
-
-
 ## Home Page
 
 ![App Screenshot](https://i.imgur.com/KOcjwQO.png)
@@ -206,7 +204,7 @@ React Router used for navigation.
 
 ## User Dashboard
 
-![App Screenshot](https://i.imgur.com/VgXDqj9.gif)
+<img src="https://i.imgur.com/VgXDqj9.gif"/>
 
 > The dashboard is only accessible in a exist and logged account.
 > In the dashboard is possible to visualize user's data information,
