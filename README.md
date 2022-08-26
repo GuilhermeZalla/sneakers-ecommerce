@@ -267,7 +267,7 @@ React Router used for navigation.
 **Database**: MongoDB
 
 
-## Possible Future Aditions
+## Possible Future Additions
 
 * Third Party Payment Integration
 * Third Party Auth like Google, Facebook, Twitter, etc
