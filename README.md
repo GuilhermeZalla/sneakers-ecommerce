@@ -206,7 +206,7 @@ React Router used for navigation.
 
 ## User Dashboard
 
-![App Screenshot](https://imgur.com/Kyd3XSH.gif)
+![App Screenshot](https://i.imgur.com/Kyd3XSH.gif)
 
 > The dashboard is only accessible in a exist and logged account.
 > In the dashboard is possible to visualize user's data information,
