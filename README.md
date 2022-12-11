@@ -203,7 +203,6 @@ React Router used for navigation.
 ```
 
 ## User Dashboard
-
 ![](https://i.imgur.com/oJfE1Ee.gif)
 
 > The dashboard is only accessible in a exist and logged account.
