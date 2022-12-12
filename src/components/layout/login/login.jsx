@@ -106,7 +106,7 @@ export const Login = () => {
                 </form>
                 <form method="POST" action="http://localhost:3001/account">
                     <fieldset>
-                        <legend className="form__legend">Create an quick account</legend>
+                        <legend className="form__legend">Create an account</legend>
                         <p className="form__paragraph">Let's get started with your Sneakers' account</p>
                         <p>
                             <input type="text" placeholder="Name" name='fullname' maxLength={34} required />

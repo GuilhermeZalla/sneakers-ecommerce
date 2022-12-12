@@ -108,7 +108,7 @@ export const UserData = (props) => {
             <div className="data">
                 <h2><IoPerson /> MY DATA</h2>
                 <div>
-                    <form action="">
+                    <form>
                         <fieldset>
                             <legend><HiDocumentText /> SAVED DATA <button type="button" onClick={openChangePasswordModal}>CHANGE PASSWORD</button></legend>
                             <p>

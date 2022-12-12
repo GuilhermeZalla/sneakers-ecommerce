@@ -11,7 +11,7 @@
 form {
     background-color: $clr-element-bg;
     width: 100%;
-    height: 710px;
+    height: 680px;
     padding: 30px 25px;
     position: relative;
 
@@ -85,11 +85,10 @@ form {
             color: $clr-neutral-4;
             font-weight: 700;
             font-size: 1.1rem;
-            margin-top: 60px;
+            margin-top: 120px;
             width: 200px;
             align-self: flex-end;
             transition: all 200ms ease-in-out;
-            position: absolute;
 
             &:active {
                 transform: scale(97%);
@@ -130,7 +129,7 @@ form {
     .addresses {
         background-color: $clr-element-bg;
         flex-basis: 80%;
-        height: 710px;
+        height: 680px;
         padding-right: 10px;
 
         h2 {
@@ -154,6 +153,7 @@ form {
             overflow-x: hidden;
             height: 500px;
             padding-bottom: 10px;
+            margin-bottom: 20px;
 
             .addresses__item-default{
                 background-color: $clr-secondary;
@@ -261,7 +261,7 @@ form {
             font-weight: 700;
             font-size: 1.1rem;
             padding: 10px 20px;
-            margin: 40px 25px 0 0;
+            margin: 0 25px 0 0;
             width: 230px;
             float: right;
             border-radius: 5px;
@@ -353,6 +353,16 @@ form {
 
     }
 }
+
+@media screen and (max-width: 990px){
+    .modal-password,
+    .modal-address{
+        &>form{
+            margin: 0 20px;
+        }
+    }
+}
+
 @media screen and (max-width: 380px) {
     form {
         legend {

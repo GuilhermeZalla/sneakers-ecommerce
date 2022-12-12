@@ -138,6 +138,9 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-start;
+                    &>h2{
+                        max-width: 120px;
+                    }
                 }
 
                 &:hover {
@@ -200,7 +203,7 @@
             width: 100%;
             flex-basis: 0;
             padding-left: 3%;
-            margin-top: 20px;
+            margin-top: 5px;
         }
     }
 }

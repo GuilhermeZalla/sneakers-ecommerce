@@ -241,7 +241,7 @@ export const Header = ({ handleController }) => {
                         <fieldset>
                             <legend>Create Your Accout</legend>
                             <p>
-                                <label htmlFor="email">Email (You'll use this as your use ID) *</label>
+                                <label htmlFor="email">Email (You'll use this as your login) *</label>
                                 <input id="email" type="email" placeholder='email@hotmail.com' name='email' required ref={email} onBlur={handleEmail} />
                                 {
                                     response !== false ? <label className="warning">This email already exists!</label> : null
